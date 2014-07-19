@@ -1,0 +1,83 @@
+
+<table>
+  <tr>
+    <th>Project Name</th>
+    <th>Property Listing</th>
+    <th>Project Type</th>
+<th>NO of flats</th>
+<th>NO of floors</th>
+<th>NO of houses</th>
+<th>NO of plots</th>
+<th>Total area</th>
+<th>Saleable area</th>
+<th>sale price</th>
+<th>state</th>
+<th>city</th>
+<th>Address</th>
+<th>postal code</th>
+<th>start date</th>
+<th>end date</th>
+<th>Property status</th>
+<th>upcomingdate</th>
+</tr>
+  <% @properties.each do |property| %>
+  <tr>
+    <td>
+      <%= property.property_name %>
+    </td>
+    <td>
+      <%= property.property_listing %>
+    </td>
+    <td>
+      <%= property.property_type %>
+    </td>
+    <td>
+      <%= property.no_of_flats %>
+    </td>
+    <td>
+      <%= property.no_of_floors %>
+    </td>
+    <td>
+      <%= property.no_of_houses %>
+    </td>
+    <td>
+      <%= property.no_of_plots%>
+    </td>
+    <td>
+      <%= property.total_area %>
+    </td>
+    <td>
+      <%= property.saleable_area %>
+    </td>
+    <td>
+      <%= property.sale_price %>
+    </td>
+    <td>
+      <%= property.state %>
+    </td>
+    <td>
+      <%= property.city %>
+    </td>
+    <td>
+      <%= property.address %>
+    </td>
+    <td>
+      <%= property.zip_code %>
+    </td>
+    <td>
+      <%= property.start_date%>
+    </td>
+    <td>
+      <%= property.end_date %>
+    </td>
+<td>
+      <%= property.property_status %>
+    </td>
+    <td>
+      <%= property.upcoming_date %>
+    </td>
+    
+
+  </tr>
+  <% end %>
+</table>

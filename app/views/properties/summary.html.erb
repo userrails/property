@@ -1,0 +1,58 @@
+<h5>Property Summary</h5>
+
+<table class="table table-striped" cellspacing="0" cellpadding="5" border="1">
+  <tr>
+    <th>
+   Details
+    </th>
+    <th>
+   Date & No.of Views
+   </th>
+  </tr>
+  
+<td>
+<div align="left">Property Name :
+  <%=@property.property_name %></div>
+  
+<div align="left">Address & City :
+  <%=@property.address %>,<%=@property.city %>
+</div>
+<div align="left">Price: Rs.
+  <%=@property.sale_price%> | Plot Area: <%=@property.saleable_area%> Sq. Ft.
+</div>
+<div align="left">Property status:
+  <% if @property.published == true %>
+  Active
+  <% else %>
+  Deactive
+  <% end %>
+</div>
+</div>
+</td>
+  
+<td>
+<div align="left">Posted on:
+<%= @property.created_at %>
+</div>
+<div> Expired date:
+  <%= @property.created_at+30.days %>
+</div>
+<div align="left">
+  Total no.of search views:
+  <%= @property.search_view %>
+</div>
+<div align="left">
+  Total no.of view full details:
+  <%= @property.full_view %>
+</div>
+  <div align="left">
+  Total no.of Responses:
+  <%= @property.contacts.count %>
+</div>
+  <div align="left">
+  Total no.of Appointments:
+  <%= @property.contacts.where("contact_option = 2").count %>
+</div>
+</td>
+</div>
+</table>
